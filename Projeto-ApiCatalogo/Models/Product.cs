@@ -22,7 +22,6 @@ namespace Projeto_ApiCatalogo.Models
         [Required(ErrorMessage = "Informe o preço do produto")]
         [Display(Name = "Preço")]
         [Column(TypeName = "decimal(10,2)")]
-        [StringLength(50)]
         public decimal Price { get; set; }
 
         public float Stock { get; set; }

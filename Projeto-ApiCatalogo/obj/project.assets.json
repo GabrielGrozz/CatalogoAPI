@@ -1004,11 +1004,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuário\\source\\repos\\Portfolio\\Projeto-ApiCatalogo\\Projeto-ApiCatalogo\\Projeto-ApiCatalogo.csproj",
+      "projectUniqueName": "C:\\Users\\Usuário\\source\\repos\\Portfolio\\ApiCatalogo\\Projeto-ApiCatalogo\\Projeto-ApiCatalogo.csproj",
       "projectName": "Projeto-ApiCatalogo",
-      "projectPath": "C:\\Users\\Usuário\\source\\repos\\Portfolio\\Projeto-ApiCatalogo\\Projeto-ApiCatalogo\\Projeto-ApiCatalogo.csproj",
+      "projectPath": "C:\\Users\\Usuário\\source\\repos\\Portfolio\\ApiCatalogo\\Projeto-ApiCatalogo\\Projeto-ApiCatalogo.csproj",
       "packagesPath": "C:\\Users\\Usuário\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuário\\source\\repos\\Portfolio\\Projeto-ApiCatalogo\\Projeto-ApiCatalogo\\obj\\",
+      "outputPath": "C:\\Users\\Usuário\\source\\repos\\Portfolio\\ApiCatalogo\\Projeto-ApiCatalogo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
