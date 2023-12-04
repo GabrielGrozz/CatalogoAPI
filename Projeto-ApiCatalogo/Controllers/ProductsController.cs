@@ -37,7 +37,7 @@ namespace Projeto_ApiCatalogo.Controllers
             {
                 return NotFound("Registro não encontrado");
             }
-            return product;
+            return Ok(product);
         }
 
         [HttpPost]
