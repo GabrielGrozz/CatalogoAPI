@@ -23,7 +23,7 @@ namespace Projeto_ApiCatalogo.Controllers
 
             if(products is null) 
             {
-                return NotFound();
+                return NotFound("nao encontrado");
             }
 
             return products;

@@ -17,6 +17,12 @@ namespace Projeto_ApiCatalogo.Controllers
             _context = context;
         }
 
+        [HttpGet("products")]
+        public ActionResult<IEnumerable<Category>> GetCategoryAndProducts()
+        {
+            return _context.Categories.Include(e => e.Products).ToList();
+        }
+
         [HttpGet]
         public ActionResult<IEnumerable<Category>> Get()
         {
@@ -66,7 +72,7 @@ namespace Projeto_ApiCatalogo.Controllers
             return Ok(categorie);
         }
 
-        [HttpDelete]
+        [HttpDelete("{id:int}")]
         public ActionResult Delete(int id)
         {
             Product product = _context.Products.FirstOrDefault(e => e.ProductId == id);
