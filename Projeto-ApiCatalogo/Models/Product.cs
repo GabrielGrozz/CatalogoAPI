@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Projeto_ApiCatalogo.Models
 { 
@@ -28,6 +29,7 @@ namespace Projeto_ApiCatalogo.Models
         public DateTime RegisterData { get; set; }
 
         public int CategoryId { get; set; }
+        [JsonIgnore]
         public Category Category { get; set; }
 
     }
