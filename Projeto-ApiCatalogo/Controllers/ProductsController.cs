@@ -22,20 +22,21 @@ namespace Projeto_ApiCatalogo.Controllers
 
             try
             {
-                throw new Exception("FAIO");
+                var products = _context.Products.AsNoTracking().ToList();
+
+                if(products == null)
+                {                
+                    //return BadRequest("Valor nulo ou não encontrado");
+                }
+                return Ok(products);
+
             }
-            catch(Exception ex) { }
+            catch (Exception)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, "excessão no banco de dados");
+                return StatusCode(StatusCodes.Status500InternalServerError, "[ERRO INTERNO]");
             }
 
-            //var products = _context.Products.AsNoTracking().ToList();
-            //if(products is null) 
-            //{
-            //    return NotFound("nao encontrado");
-            //}
 
-            //return products;
         }
 
         [HttpGet("{id:int}", Name ="GetProduct")]
