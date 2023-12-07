@@ -20,21 +20,21 @@ namespace Projeto_ApiCatalogo.Controllers
         [HttpGet("products")]
         public ActionResult<IEnumerable<Category>> GetCategoryAndProducts()
         {
-            return _context.Categories.Include(e => e.Products).ToList();
+            return _context.Categories.AsNoTracking().Include(e => e.Products).ToList();
         }
 
         [HttpGet]
         public ActionResult<IEnumerable<Category>> Get()
         {
 
-            return _context.Categories.ToList();
+            return _context.Categories.AsNoTracking().ToList();
                         
         }
 
         [HttpGet("{id:int}", Name ="GetCategory")]
         public ActionResult<Category> Get(int id) 
         {
-            Category categorie = _context.Categories.FirstOrDefault(e => e.CategoryId == id);
+            Category categorie = _context.Categories.AsNoTracking().FirstOrDefault(e => e.CategoryId == id);
 
             if(categorie == null)
             {

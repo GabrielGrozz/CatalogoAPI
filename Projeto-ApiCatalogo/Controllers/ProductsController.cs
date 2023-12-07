@@ -19,20 +19,29 @@ namespace Projeto_ApiCatalogo.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Product>> Get()
         {
-            var products = _context.Products.ToList();
 
-            if(products is null) 
+            try
             {
-                return NotFound("nao encontrado");
+                throw new Exception("FAIO");
+            }
+            catch(Exception ex) { }
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "excessão no banco de dados");
             }
 
-            return products;
+            //var products = _context.Products.AsNoTracking().ToList();
+            //if(products is null) 
+            //{
+            //    return NotFound("nao encontrado");
+            //}
+
+            //return products;
         }
 
         [HttpGet("{id:int}", Name ="GetProduct")]
         public ActionResult<Product> Get(int id) 
         {
-            var product = _context.Products.FirstOrDefault(e => e.ProductId == id);
+            var product = _context.Products.AsNoTracking().FirstOrDefault(e => e.ProductId == id);
             if(product is null)
             {
                 return NotFound("Registro não encontrado");
